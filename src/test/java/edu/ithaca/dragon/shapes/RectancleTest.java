@@ -25,4 +25,14 @@ public class RectancleTest {
         assertEquals(0.2, myRectangle2.calcArea());
     }
 
+    @Test
+    public void doubleSizeTest(){
+        Rectangle myRectangle = new Rectangle(10, 5);
+        myRectangle.doubleSize();
+        assertEquals(200, myRectangle.calcArea());
+        Rectangle myRectangle2 = new Rectangle(0.5, 0.4);
+        myRectangle2.doubleSize();
+        assertEquals(0.8, myRectangle2.calcArea());
+    }
+
 }
