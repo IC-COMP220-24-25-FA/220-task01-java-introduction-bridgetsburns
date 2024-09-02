@@ -24,7 +24,8 @@ public class Triangle {
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Not Implemented");
+        double longestLine = Math.sqrt((base * base)+ (height * height));
+        return longestLine;
     }
 
 }
