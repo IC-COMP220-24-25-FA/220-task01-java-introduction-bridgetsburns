@@ -18,7 +18,7 @@ public class TriangleTest {
         Triangle myTriangle = new Triangle(10,5);
         assertEquals(25, myTriangle.calcArea());
         Triangle myTriangle2 = new Triangle(0.10, 0.5);
-        assertEquals(0.25, myTriangle2.calcArea());
+        assertEquals(0.025, myTriangle2.calcArea());
     }
 
 }
