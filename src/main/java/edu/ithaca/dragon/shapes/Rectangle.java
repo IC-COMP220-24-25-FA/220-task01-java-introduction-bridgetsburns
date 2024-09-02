@@ -1,10 +1,17 @@
 package edu.ithaca.dragon.shapes;
 
 public class Rectangle {
-    
+    private double length;
+    private double width;
 
-    public Rectangle(double length, double width){
-        throw new RuntimeException("Not implemented yet");
+    public Rectangle(double lengthIn, double widthIn){
+        if (lengthIn <= 0 || widthIn <= 0 ){
+            throw new IllegalArgumentException("Length and width must be greater than 0");
+        }
+        else{
+            length = lengthIn;
+            width = widthIn;
+        }
     }
 
     public double calcArea(){
