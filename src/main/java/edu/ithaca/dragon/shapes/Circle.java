@@ -6,8 +6,8 @@ public class Circle {
     /**
      * @throws IllegalArgumentException if radius is not a positive number
      */
-    public Circle(double radius){
-        this.radius = radius;
+    public Circle(double radiusIn){
+        radius = radiusIn;
     }
 
     /**
@@ -23,6 +23,11 @@ public class Circle {
      */
     public void doubleSize(){
         throw new RuntimeException("Not implemented yet");
+    }
+
+    public double returnRadius(){
+        double returnRadius = radius;
+        return returnRadius;
     }
 
     /**
