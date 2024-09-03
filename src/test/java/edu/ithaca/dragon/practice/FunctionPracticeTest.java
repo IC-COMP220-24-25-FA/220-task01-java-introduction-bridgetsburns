@@ -27,7 +27,16 @@ public class FunctionPracticeTest {
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        assertEquals(85.6, FunctionPractice.calcSalePrice(100, 20, 7));
+        assertEquals(85.6, FunctionPractice.calcSalePrice(100, 20, .07));
+        assertEquals(85.6, FunctionPractice.calcSalePrice(100, .20, 7));
+        assertEquals(85.6, FunctionPractice.calcSalePrice(100, .20, .07));
+        // code should work if discount or tax is already in decimal format
+        assertThrows(IllegalArgumentException.class, ()-> FunctionPractice.calcSalePrice(-100, 20, 7));
+        assertThrows(IllegalArgumentException.class, ()-> FunctionPractice.calcSalePrice(100, -20, 7));
+        assertThrows(IllegalArgumentException.class, ()-> FunctionPractice.calcSalePrice(100, 20, -7));
+        // should throw an error if any values are negative
+
     }
     
 }
