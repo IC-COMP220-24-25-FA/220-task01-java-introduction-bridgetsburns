@@ -81,4 +81,32 @@ public class FunctionPracticeTest {
         assertEquals(-1, FunctionPractice.findFirstLargest(numbers4));
 
     }
+
+    @Test
+    public void findLastLargestTest(){
+        List<Integer> numbers1 =new ArrayList<Integer>();
+            numbers1.add(4);
+            numbers1.add(5);
+            numbers1.add(2);
+        assertEquals(1, FunctionPractice.findLastLargest(numbers1));
+       
+        List<Integer> numbers2 =new ArrayList<Integer>();
+            numbers2.add(5);
+            numbers2.add(4);
+            numbers2.add(2);
+        assertEquals(0, FunctionPractice.findLastLargest(numbers2));
+        List<Integer> numbers3 =new ArrayList<Integer>();
+            numbers3.add(5);
+            numbers3.add(2);
+            numbers3.add(5);
+        assertEquals(2,  FunctionPractice.findLastLargest(numbers3));
+        List<Integer> numbers4 =new ArrayList<Integer>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(numbers4));
+        List<Integer> numbers5 = new ArrayList<Integer>();
+            numbers5.add(5);
+            numbers5.add(5);
+            numbers5.add(5);
+        assertEquals(2, FunctionPractice.findFirstLargest(numbers5));
+
+    }
 }
