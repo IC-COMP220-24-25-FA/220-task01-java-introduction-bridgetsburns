@@ -29,7 +29,19 @@ public class FunctionPractice {
      * @return the final price at register of the given item after discount and tax applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+        if (originalPrice < 0 || discountPercent < 0 || salesTax < 0){
+            throw new IllegalArgumentException("All values should be greater than 0");
+        }
+        else{
+        if (salesTax > 1){
+            salesTax = salesTax / 100;
+        }
+        if (discountPercent > 1 ){
+            discountPercent = discountPercent / 100;
+        }
+        double discountPrice = originalPrice - (originalPrice * discountPercent);
+        return (discountPrice + (discountPrice * salesTax));
+    }
     }
 
     /**
