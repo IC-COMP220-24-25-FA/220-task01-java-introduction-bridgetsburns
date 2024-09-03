@@ -15,11 +15,14 @@ public class FunctionPracticeTest {
         assertEquals(5, FunctionPractice.largestOfThree(4, 5, 2));
         assertEquals(5, FunctionPractice.largestOfThree(5, 4, 2));
         assertEquals(5, FunctionPractice.largestOfThree(4, 2, 5));
+        // first three tests make sure 5 is returned no matter the order of the inputs
         assertEquals(5, FunctionPractice.largestOfThree(5, 5, 5));
+        // makes sure a repeated value doesn't cause problems 
 
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, -1, 3));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, 3, -1));
+        // these three tests ensure an error is thrown if any or all of the values are < 0
     }
 
     @Test
