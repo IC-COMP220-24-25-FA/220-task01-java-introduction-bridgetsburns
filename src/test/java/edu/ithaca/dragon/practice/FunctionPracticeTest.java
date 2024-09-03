@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class FunctionPracticeTest {
@@ -53,9 +56,28 @@ public class FunctionPracticeTest {
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(2, -2, true));
         // throws an error if any numeric value is negative
 
-
-
-
     }
     
+    @Test
+    public void findFirstLargestTest(){
+       List<Integer> numbers1 =new ArrayList<Integer>();
+            numbers1.add(4);
+            numbers1.add(5);
+            numbers1.add(2);
+        assertEquals(1, FunctionPractice.findFirstLargest(numbers1));
+       
+        List<Integer> numbers2 =new ArrayList<Integer>();
+            numbers2.add(5);
+            numbers2.add(4);
+            numbers2.add(2);
+        assertEquals(0, FunctionPractice.findFirstLargest(numbers2));
+        List<Integer> numbers3 =new ArrayList<Integer>();
+            numbers3.add(5);
+            numbers3.add(2);
+            numbers3.add(5);
+        assertEquals(0,  FunctionPractice.findFirstLargest(numbers3));
+        List<Integer> numbers4 =new ArrayList<Integer>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(numbers4));
+
+    }
 }
