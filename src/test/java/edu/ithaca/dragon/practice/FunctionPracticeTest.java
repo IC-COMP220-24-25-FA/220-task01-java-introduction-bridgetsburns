@@ -38,5 +38,24 @@ public class FunctionPracticeTest {
         // should throw an error if any values are negative
 
     }
+
+    @Test
+    public void isGoodDogTest(){
+        assertEquals(true, FunctionPractice.isGoodDog(4, 1, true));
+        assertEquals(true, FunctionPractice.isGoodDog(4, 1, false));
+        //if dog hasnt chewed shoes in a day, they are a good dog
+        assertEquals(true, FunctionPractice.isGoodDog(4, 0, true));
+        // if dog fetched the paper, they are a good dog
+        assertEquals(false, FunctionPractice.isGoodDog(4, 0, false));
+        // if dog chewed shoes and didnt fetch the paper, they are a good dog
+
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-2, 2, true));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(2, -2, true));
+        // throws an error if any numeric value is negative
+
+
+
+
+    }
     
 }
