@@ -101,12 +101,12 @@ public class FunctionPracticeTest {
             numbers3.add(5);
         assertEquals(2,  FunctionPractice.findLastLargest(numbers3));
         List<Integer> numbers4 =new ArrayList<Integer>();
-        assertEquals(-1, FunctionPractice.findFirstLargest(numbers4));
+        assertEquals(-1, FunctionPractice.findLastLargest(numbers4));
         List<Integer> numbers5 = new ArrayList<Integer>();
             numbers5.add(5);
             numbers5.add(5);
             numbers5.add(5);
-        assertEquals(2, FunctionPractice.findFirstLargest(numbers5));
+        assertEquals(2, FunctionPractice.findLastLargest(numbers5));
 
     }
 }
