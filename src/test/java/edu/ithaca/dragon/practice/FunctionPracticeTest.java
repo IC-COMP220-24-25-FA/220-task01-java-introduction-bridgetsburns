@@ -107,6 +107,18 @@ public class FunctionPracticeTest {
             numbers5.add(5);
             numbers5.add(5);
         assertEquals(2, FunctionPractice.findLastLargest(numbers5));
+    }
 
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        List<String> strings1 = new ArrayList<String>();
+        strings1.add("Hello");
+        strings1.add("World");
+        assertEquals(0, FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'l'));
+        strings1.add("hello");
+        assertEquals(0, FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'l'));
+        assertEquals(-1, FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'a'));
+        List<String> strings2 = new ArrayList<String>();
+        assertEquals(-1, FunctionPractice.findFirstMostOccurencesOfLetter(strings2, 'l'));
     }
 }
