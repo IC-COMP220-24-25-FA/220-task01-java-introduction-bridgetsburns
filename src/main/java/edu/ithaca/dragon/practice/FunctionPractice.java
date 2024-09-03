@@ -100,13 +100,40 @@ public class FunctionPractice {
         }
     }
 
+    public static int countCharacterOccurences(String word, char letter){
+        int count = 0;
+        for (char character = 0; character < word.length(); character++){
+            if (word.charAt(character) == letter){
+                count++;
+            } 
+        }
+        return count;
+    }
     /**
      * @return the string that has contains the most occurences of the given letter
      * @throws 
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        if (words.size() == 0){
+            String stringToReturn = "None";
+            return stringToReturn;
+        }
+        String stringToReturn = words.get(0);
+        int maxOccurrences = 0;
+        for (int word = 0; word < words.size(); word++){
+            int occurrences = countCharacterOccurences(words.get(word), letter);
+            if (occurrences > maxOccurrences) {
+                maxOccurrences = occurrences;
+                stringToReturn = words.get(word);
+        }
+        if (maxOccurrences == 0) {
+            return "None";
+        }
+
     }
-
-
+    return stringToReturn;
 }
+}
+
+
+

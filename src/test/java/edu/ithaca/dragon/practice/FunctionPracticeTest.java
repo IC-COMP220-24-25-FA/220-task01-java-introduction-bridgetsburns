@@ -114,11 +114,11 @@ public class FunctionPracticeTest {
         List<String> strings1 = new ArrayList<String>();
         strings1.add("Hello");
         strings1.add("World");
-        assertEquals(0, FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'l'));
+        assertEquals("Hello", FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'l'));
         strings1.add("hello");
-        assertEquals(0, FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'l'));
-        assertEquals(-1, FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'a'));
+        assertEquals("Hello", FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'l'));
+        assertEquals("None", FunctionPractice.findFirstMostOccurencesOfLetter(strings1, 'a'));
         List<String> strings2 = new ArrayList<String>();
-        assertEquals(-1, FunctionPractice.findFirstMostOccurencesOfLetter(strings2, 'l'));
+        assertEquals("None", FunctionPractice.findFirstMostOccurencesOfLetter(strings2, 'l'));
     }
 }
