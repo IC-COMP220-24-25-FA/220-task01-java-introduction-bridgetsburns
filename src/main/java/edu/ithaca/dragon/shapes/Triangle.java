@@ -28,4 +28,8 @@ public class Triangle {
         return longestLine;
     }
 
+    public String toString(){
+        return "This is a triangle with a base of "+ base + "and a height of " + height;
+    }
+
 }

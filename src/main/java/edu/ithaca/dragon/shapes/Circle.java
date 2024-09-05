@@ -41,4 +41,8 @@ public class Circle {
     public double longestLineWithin(){
         return radius * 2;
     }
+
+    public String toString(){
+        return "This is a circle with a radius of "+ radius;
+    }
 }

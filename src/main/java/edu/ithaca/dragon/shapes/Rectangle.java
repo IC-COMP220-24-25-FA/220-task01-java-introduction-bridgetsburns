@@ -28,5 +28,8 @@ public class Rectangle {
         double longestLine = Math.sqrt((length * length)+ (width * width));
         return longestLine;
     }
+    public String toString(){
+        return "This is a rectangle with a width of "+ width + "and a length of " + length;
+    }
     
 }
