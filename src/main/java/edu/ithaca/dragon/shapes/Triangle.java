@@ -29,7 +29,7 @@ public class Triangle implements ShapeInterface{
     }
 
     public String toString(){
-        return "This is a triangle with a base of "+ base + "and a height of " + height;
+        return "This is a triangle with a base of "+ base + " and a height of " + height;
     }
 
 }

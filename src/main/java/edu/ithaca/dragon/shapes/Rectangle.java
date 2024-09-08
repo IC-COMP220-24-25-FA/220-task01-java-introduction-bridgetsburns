@@ -29,7 +29,7 @@ public class Rectangle implements ShapeInterface{
         return longestLine;
     }
     public String toString(){
-        return "This is a rectangle with a width of "+ width + "and a length of " + length;
+        return "This is a rectangle with a width of "+ width + " and a length of " + length;
     }
     
 }
