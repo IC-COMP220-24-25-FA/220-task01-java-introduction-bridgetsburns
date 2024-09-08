@@ -1,13 +1,18 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements ShapeInterface {
     private double radius;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
      */
-    public Circle(double radius){
-        this.radius = radius;
+    public Circle(double radiusIn){
+        if (radiusIn <= 0){
+            throw new IllegalArgumentException("Radius must be greater than 0");
+        }
+        else {
+            radius = radiusIn;
+        }
     }
 
     /**
@@ -22,13 +27,22 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        radius = radius * 2;
+    }
+
+    public double returnRadius(){
+        double returnRadius = radius;
+        return returnRadius;
     }
 
     /**
      * @return the longest straight line that can be drawn within this circle
      */
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        return radius * 2;
+    }
+
+    public String toString(){
+        return "This is a circle with a radius of "+ radius;
     }
 }
